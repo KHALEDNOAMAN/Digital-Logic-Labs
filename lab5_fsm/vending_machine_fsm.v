@@ -1,0 +1,1 @@
+module vending_machine_fsm(input clk, rst, coin, output dispense); reg state; always @(posedge clk) state <= rst ? 0 : coin; assign dispense = state; endmodule
