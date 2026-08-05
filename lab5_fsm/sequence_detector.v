@@ -1,0 +1,1 @@
+module sequence_detector(input clk, rst, din, output detect); reg[3:0] sr; always @(posedge clk) sr <= rst ? 0 : {sr[2:0], din}; assign detect = (sr == 4'b1011); endmodule
