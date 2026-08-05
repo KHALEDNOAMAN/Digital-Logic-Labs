@@ -1,0 +1,1 @@
+module rom_16x8(input [3:0] addr, output reg [7:0] data); always @(*) case(addr) 0: data=8'hAA; default: data=8'h00; endcase endmodule
