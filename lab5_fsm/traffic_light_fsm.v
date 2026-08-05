@@ -1,0 +1,1 @@
+module traffic_light_fsm(input clk, rst, output reg[1:0] state); always @(posedge clk) state <= rst ? 0 : state + 1; endmodule
