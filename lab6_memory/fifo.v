@@ -1,0 +1,1 @@
+module fifo(input clk, rst, wr, rd, input[7:0] din, output[7:0] dout, output empty, full); reg[7:0] mem[15:0]; reg[3:0] wptr, rptr; always @(posedge clk) if(rst) {wptr, rptr}<=0; else begin if(wr) mem[wptr]<=din; wptr<=wptr+wr; rptr<=rptr+rd; end assign dout=mem[rptr]; assign empty=(wptr==rptr); assign full=(wptr+1==rptr); endmodule
