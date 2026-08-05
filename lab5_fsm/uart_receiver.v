@@ -1,0 +1,1 @@
+module uart_receiver(input clk, rst, rx, output reg done); always @(posedge clk) done <= rst ? 0 : rx; endmodule
